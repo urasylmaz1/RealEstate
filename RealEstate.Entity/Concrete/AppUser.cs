@@ -1,13 +1,10 @@
 using System;
-using RealEstate.Entity.Abstract;
+using Microsoft.AspNetCore.Identity;
 
 namespace RealEstate.Entity.Concrete;
 
-public class AppUser : BaseClass
+public class AppUser : IdentityUser
 {
-    public string Email { get; set; } = string.Empty;
-    public string PasswordHash { get; set; } = string.Empty;
-    public string? Phone { get; set; }
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
     public string? ProfilePicture { get; set; }
@@ -18,5 +15,4 @@ public class AppUser : BaseClass
     // Relationships
     public ICollection<Property> Properties { get; set; } = new List<Property>();
     public ICollection<Inquiry> Inquiries { get; set; } = new List<Inquiry>();
-    public ICollection<AppUserRole> UserRoles { get; set; } = new List<AppUserRole>();
 }

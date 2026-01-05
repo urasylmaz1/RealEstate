@@ -23,7 +23,7 @@ public class Property : BaseClass
     public int PropertyTypeId { get; set; }
     public PropertyType PropertyType { get; set; } = null!;
 
-    public int AgentId { get; set; }
+    public string AgentId { get; set; } = string.Empty;
     public AppUser Agent { get; set; } = null!;
 
     public ICollection<PropertyImage> Images { get; set; } = new List<PropertyImage>();

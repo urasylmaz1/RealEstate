@@ -13,3 +13,4 @@ C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\
 C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\refint\RealEstate.Data.dll
 C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.pdb
 C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\ref\RealEstate.Data.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.sourcelink.json

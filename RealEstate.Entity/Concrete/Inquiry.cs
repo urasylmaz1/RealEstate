@@ -15,7 +15,7 @@ public class Inquiry : BaseClass
     public int PropertyId { get; set; }
     public Property Property { get; set; } = null!;
 
-    public int? UserId { get; set; }
+    public string? UserId { get; set; }
     public AppUser? User { get; set; }
 }
 
