@@ -1,0 +1,15 @@
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\bin\Debug\net10.0\RealEstate.Data.deps.json
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\bin\Debug\net10.0\RealEstate.Data.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\bin\Debug\net10.0\RealEstate.Data.pdb
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\bin\Debug\net10.0\RealEstate.Entity.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\bin\Debug\net10.0\RealEstate.Entity.pdb
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.csproj.AssemblyReference.cache
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.AssemblyInfoInputs.cache
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.AssemblyInfo.cs
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.csproj.CoreCompileInputs.cache
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEsta.400D3A2F.Up2Date
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\refint\RealEstate.Data.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\RealEstate.Data.pdb
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Data\obj\Debug\net10.0\ref\RealEstate.Data.dll

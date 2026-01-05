@@ -1,0 +1,11 @@
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\bin\Debug\net10.0\RealEstate.Entity.deps.json
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\bin\Debug\net10.0\RealEstate.Entity.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\bin\Debug\net10.0\RealEstate.Entity.pdb
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\RealEstate.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\RealEstate.Entity.AssemblyInfoInputs.cache
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\RealEstate.Entity.AssemblyInfo.cs
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\RealEstate.Entity.csproj.CoreCompileInputs.cache
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\RealEstate.Entity.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\refint\RealEstate.Entity.dll
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\RealEstate.Entity.pdb
+C:\Users\uras_\Documents\GitHub\ProjeOdevi\RealEstate\RealEstate.Entity\obj\Debug\net10.0\ref\RealEstate.Entity.dll
