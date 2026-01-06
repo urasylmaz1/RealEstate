@@ -25,7 +25,10 @@ public class RealEstateDbContext : IdentityDbContext<AppUser, AppRole, string>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
+        modelBuilder.Entity<Property>().HasQueryFilter(p => !p.IsDeleted);
+        modelBuilder.Entity<PropertyType>().HasQueryFilter(pt => !pt.IsDeleted);
+        modelBuilder.Entity<PropertyImage>().HasQueryFilter(pi => !pi.IsDeleted);
+        modelBuilder.Entity<Inquiry>().HasQueryFilter(i => !i.IsDeleted);
 
         // Seed data for PropertyTypes
         modelBuilder.Entity<PropertyType>().HasData(

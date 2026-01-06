@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RealEstate.Data;
+using RealEstate.Data.Abstract;
+using RealEstate.Data.Concrete;
 using RealEstate.Entity.Concrete;
 
 
@@ -19,6 +21,8 @@ if (string.IsNullOrEmpty(connectionString))
 }
 
 builder.Services.AddDbContext<RealEstateDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 
