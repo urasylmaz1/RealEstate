@@ -35,7 +35,7 @@ public class UnitOfWork : IUnitOfWork
         }
         finally
         {
-            await _transaction.DisposeAsync();// Heap'teki nesneyi öldür!
+            await _transaction.DisposeAsync();
             _transaction = null!;
         }
     }
