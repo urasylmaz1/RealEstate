@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using RealEstate.Business.Configs;
 using RealEstate.Data;
 using RealEstate.Data.Abstract;
 using RealEstate.Data.Concrete;
@@ -23,6 +24,22 @@ if (string.IsNullOrEmpty(connectionString))
 builder.Services.AddDbContext<RealEstateDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+//Add services
+//Add automapper
+
+builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
+builder.Services.Configure<AppUrlConfig>(builder.Configuration.GetSection("AppUrlConfig"));
+builder.Services.Configure<CorsConfig>(builder.Configuration.GetSection("CorsSettings"));
+
+//Add Fluent Validation
+
+var jwtConfig = builder.Configuration.GetSection("JwtConfig").Get<JwtConfig>();
+
+//Add identity authentication
+
+var corsConfig = builder.Configuration.GetSection("CorsSettings").Get<CorsConfig>();
+//Add CORS
+
 
 var app = builder.Build();
 
@@ -32,6 +49,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowedSpesificOrigins");
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
