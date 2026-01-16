@@ -16,6 +16,7 @@
     <Folder Include="Configs\" />
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\ResponseDtos\" />
+    <Folder Include="Mapping\" />
   </ItemGroup>
 
   <PropertyGroup>

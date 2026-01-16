@@ -5,6 +5,11 @@ using RealEstate.Data;
 using RealEstate.Data.Abstract;
 using RealEstate.Data.Concrete;
 using RealEstate.Entity.Concrete;
+using FluentValidation.AspNetCore;
+using RealEstate.Business.Validators;
+using AutoMapper;
+using RealEstate.Business.Mapping;
+using FluentValidation;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,13 +30,17 @@ builder.Services.AddDbContext<RealEstateDbContext>(options => options.UseNpgsql(
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 //Add services
-//Add automapper
+
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile));
 
 builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
 builder.Services.Configure<AppUrlConfig>(builder.Configuration.GetSection("AppUrlConfig"));
 builder.Services.Configure<CorsConfig>(builder.Configuration.GetSection("CorsSettings"));
 
-//Add Fluent Validation
+
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssemblyContaining<PropertyCreateDtoValidator>();
 
 var jwtConfig = builder.Configuration.GetSection("JwtConfig").Get<JwtConfig>();
 

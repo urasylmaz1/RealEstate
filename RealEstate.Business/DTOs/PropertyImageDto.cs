@@ -6,7 +6,7 @@ public class PropertyImageDto
 {
     public int Id { get; set; }
     public DateTime CreatedAt { get; set; }
-    public DateTime ModifiedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
     public string ImageUrl { get; set; } = string.Empty;
     public int DisplayOrder { get; set; }
     public bool IsPrimary { get; set; }
