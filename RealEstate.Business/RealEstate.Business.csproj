@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
     <Folder Include="Configs\" />
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\ResponseDtos\" />
