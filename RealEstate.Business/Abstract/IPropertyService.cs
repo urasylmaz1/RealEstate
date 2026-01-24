@@ -10,7 +10,8 @@ namespace RealEstate.Business.Abstract
         Task<ResponseDto<PropertyDto>> GetByIdAsync(int id);
         Task<ResponseDto<PropertyDto>> CreateAsync(PropertyCreateDto propertyCreateDto);
         Task<ResponseDto<PropertyDto>> UpdateAsync(int id, PropertyUpdateDto propertyUpdateDto);
-        Task<ResponseDto<NoContent>> DeleteAsync(int id);
+        Task<ResponseDto<NoContent>> HardDeleteAsync(int id);
+        Task<ResponseDto<NoContent>> SoftDeleteAsync(int id);
         Task<ResponseDto<List<PropertyDto>>> GetMyPropertiesAsync();
         Task<ResponseDto<List<PropertyDto>>> GetFilteredAsync(PropertyFilterDto filter);
     }
