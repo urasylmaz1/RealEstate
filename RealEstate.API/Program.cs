@@ -10,6 +10,8 @@ using RealEstate.Business.Validators;
 using AutoMapper;
 using RealEstate.Business.Mapping;
 using FluentValidation;
+using RealEstate.Business.Abstract;
+using RealEstate.Business.Concrete;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +31,7 @@ if (string.IsNullOrEmpty(connectionString))
 builder.Services.AddDbContext<RealEstateDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IPropertyService, PropertyService>();
 //Add services
 
 builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile));
