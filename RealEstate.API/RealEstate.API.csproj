@@ -18,4 +18,9 @@
     <ProjectReference Include="..\RealEstate.Business\RealEstate.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Filters\" />
+    <Folder Include="Middleware\" />
+  </ItemGroup>
+
 </Project>
