@@ -86,4 +86,24 @@ public interface IRepository<T> where T : class
     /// </summary>
     /// <param name="entity"></param>
     void Remove(T entity);
+    /// <summary>
+    /// Sayfalanmış veri getirme
+    /// </summary>
+    /// <param name="predicate"></param>
+    /// <param name="orderBy"></param>
+    /// <param name="skip"></param>
+    /// <param name="take"></param>
+    /// <param name="showIsDeleted"></param>
+    /// <param name="asExpanded"></param>
+    /// <param name="includes"></param>
+    /// <returns></returns>
+    Task<(IEnumerable<T> Data, int TotalCount)> GetPagedAsync(
+        Expression<Func<T, bool>>? predicate = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        int skip = 0,
+        int take = 10,
+        bool showIsDeleted = false,
+        bool asExpanded = false,
+        params Func<IQueryable<T>, IQueryable<T>>[] includes
+    );
 }

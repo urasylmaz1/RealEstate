@@ -117,6 +117,49 @@ public class Repository<T> : IRepository<T> where T : class
         _dbSet.Remove(entity);
     }
 
+    public async Task<(IEnumerable<T> Data, int TotalCount)> GetPagedAsync(
+        Expression<Func<T, bool>>? predicate = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        int skip = 0,
+        int take = 10,
+        bool showIsDeleted = false,
+        bool asExpanded = false,
+        params Func<IQueryable<T>, IQueryable<T>>[] includes)
+    {
+        IQueryable<T> query = _dbSet;
+
+        if (showIsDeleted)
+        {
+            query = query.IgnoreQueryFilters();
+        }
+
+        if (asExpanded)
+        {
+            query = query.AsExpandable();
+        }
+
+        if (predicate != null)
+        {
+            query = query.Where(predicate);
+        }
+
+        if (includes != null)
+        {
+            query = includes.Aggregate(query, (current, include) => include(current));
+        }
+
+        var totalCount = await query.CountAsync();
+
+        if (orderBy != null)
+        {
+            query = orderBy(query);
+        }
+
+        var data = await query.Skip(skip).Take(take).ToListAsync();
+
+        return (data, totalCount);
+    }
+
     public void Update(T entity)
     {
         _dbSet.Update(entity);
